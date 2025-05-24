@@ -1,6 +1,6 @@
 # Parancsok
 - Alkalmazás futtatása: ./mvnw package -DskipTests && java -jar target/Feladat-1.0.0.jar
-- Tesztek futtatása: ./mvnw clean && ./mvnw test
+- Tesztek futtatása: ./mvnw clean test
 - Docker image buildelése: ./mvnw package -DskipTests && sudo docker build -t feladat/feladat-application .
 - Docker image futtatás: sudo docker run -p 8080:8080 feladat/feladat-application
 

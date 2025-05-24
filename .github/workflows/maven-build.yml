@@ -1,0 +1,19 @@
+name: Maven CI
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oracle-actions/setup-java@v1
+        with:
+          website: jdk.java.net
+          release: 23
+      - name: Run Build & Tests
+        run: mvn clean install
